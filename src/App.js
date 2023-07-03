@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import ClassComponent from './Task1/Component';
+import Locationfind from './Task2/location';
+import Clslocation from './Task3/ClassLocation';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <ClassComponent />
+    <Locationfind />
+    <Clslocation />
+    
     </div>
+
   );
+  
+  
+  
 }
 
 export default App;

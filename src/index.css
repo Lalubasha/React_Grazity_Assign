@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.Task{
+  text-align: center;
+  background-color: rgb(143, 227, 234);
+  
+}
+.Task1{
+  
+  
+  color: rgb(146, 105, 236);
+}
