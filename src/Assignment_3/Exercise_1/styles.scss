@@ -1,0 +1,23 @@
+
+$primary-color: #007bff;
+$secondary-color: #333;
+
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+
+  .title {
+    color: $secondary-color;
+    font-size: 24px;
+  }
+
+  .button {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
