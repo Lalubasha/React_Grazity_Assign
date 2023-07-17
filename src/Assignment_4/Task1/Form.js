@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
+import './FormExample.css'; 
 
 const FormExample = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [submittedData, setSubmittedData] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Reset error messages
     setNameError('');
     setEmailError('');
 
-    // Perform form validation
     if (name.trim() === '') {
       setNameError('Please enter your name');
     }
@@ -24,13 +24,9 @@ const FormExample = () => {
       setEmailError('Please enter a valid email');
     }
 
-    // Perform form submission logic if there are no errors
     if (nameError === '' && emailError === '') {
-      // Perform form submission logic here
-      console.log('Name:', name);
-      console.log('Email:', email);
+      setSubmittedData({ name, email });
 
-      // Reset form fields
       setName('');
       setEmail('');
     }
@@ -43,28 +39,38 @@ const FormExample = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} className="form">
+      <div className="form-group">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          className={nameError ? 'input-error' : ''}
         />
         {nameError && <p className="error">{nameError}</p>}
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className={emailError ? 'input-error' : ''}
         />
         {emailError && <p className="error">{emailError}</p>}
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" className="submit-button">Submit</button>
+
+      {submittedData && (
+        <div className="submitted-data">
+          <h2>Submitted Data</h2>
+          <p>Name: {submittedData.name}</p>
+          <p>Email: {submittedData.email}</p>
+        </div>
+      )}
     </form>
   );
 };

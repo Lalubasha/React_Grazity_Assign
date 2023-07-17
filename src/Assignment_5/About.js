@@ -1,11 +1,14 @@
+
+
 import React from 'react';
 
-const About = () => {
+function About() {
   return (
     <div>
-    <h2>Welcome to the About page!</h2>
-    <h2>Welcome to the About page!</h2>
-    </div>);
-};
+      <h2>About</h2>
+      <p>Welcome to the About page! Here, you can find information about our company and its history.</p>
+    </div>
+  );
+}
 
 export default About;

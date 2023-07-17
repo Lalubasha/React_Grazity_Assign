@@ -1,16 +1,19 @@
-import React from "react";
-import Task1 from "./Assignment_4/Task1/Task1";
-import Task2 from "./Assignment_4/Task2/Task2";
+import React from 'react';
+import Task from './Assignment_4/Task1/Task1';
+import Task2 from './Assignment_4/Task2/Task2';
+import './App.css'; 
 
-
-
-const App=() => {
+function App() {
   return (
-    <div>
-    <Task1 />
-    <Task2 />
+    <div className="container">
+      <div className="top-container">
+        <Task />
+      </div>
+      <div className="bottom-container">
+        <Task2 />
+      </div>
     </div>
   );
+}
 
-};
 export default App;

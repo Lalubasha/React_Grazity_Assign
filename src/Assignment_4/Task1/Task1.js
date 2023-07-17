@@ -2,11 +2,17 @@ import React from "react";
 import Form from './Form';
 import Event from './Event';
 
-const Task1=()=>{
-    return(
+const Task1 = () => {
+    return (
+
         <div>
-        <Form />
-        <Event />
+            <div>
+                <Form />
+
+            </div>
+            <div>
+                <Event />
+            </div>
         </div>
     );
 
